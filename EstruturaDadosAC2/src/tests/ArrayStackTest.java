@@ -5,12 +5,15 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import me.javacourse.arraystack.ArrayStack;
+import me.javacourse.stack.ArrayStack;
 import me.javacourse.stack.EmptyStackException;
 import me.javacourse.stack.FullStackException;
 
-class ArrayStackTests {
+class ArrayStackTest {
 
+	/*	2) Desenvolva um projeto no GitHub que estenda a classe de testes do TAD Pilha 
+	 	implementado usando array que teste uma pilha de String. */
+	
 	private static final ArrayStack<String> s = new ArrayStack<String>(5);
 	
 	@Test
