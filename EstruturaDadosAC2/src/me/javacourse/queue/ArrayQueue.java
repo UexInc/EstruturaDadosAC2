@@ -44,14 +44,14 @@ public class ArrayQueue<T> implements Queue<T> {
 	
 	public String toString() {
 		String s;
-		s = "[";
+		s = "(";
 		if (size() > 0) s += queue[0];
 		if (size() > 1) {
 			for (int i = 1; i <= size() - 1; i++) {
 				s += ", " + queue[i];
 			}
 		}
-		return s + "]";
+		return s + ")";
 	}
 
 }

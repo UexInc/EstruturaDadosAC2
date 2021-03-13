@@ -42,8 +42,8 @@ public class NodeStack<T> implements Stack<T> {
 		aux.setNext(null);
 		size--;
 		return temp;
-	} 
-
+	}
+	
 	public String toString() {
 		String s;
 		Node<T> p = top;

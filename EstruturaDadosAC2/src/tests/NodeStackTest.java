@@ -31,6 +31,8 @@ class NodeStackTest {
 		assertEquals("[O, T, P, X]", ns.toString(), "Deve imprimir [O, T, P, X]");
 		assertEquals('O', ns.top(), "Deve retornar O");
 		assertEquals('O', ns.pop(), "Deve retornar O");
+		// ns.reverseList();
+		assertEquals("[X, P, T, O]", ns.toString(), "Deve imprimir [X, P, T, O]");
 	}
 
 }
