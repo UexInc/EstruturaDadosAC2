@@ -1,5 +1,7 @@
 package me.javacourse.queue;
 
+import me.javacourse.stack.Node;
+
 public class NodeQueue<T> implements Queue<T> {
 
 	private Node<T> head;
@@ -19,6 +21,8 @@ public class NodeQueue<T> implements Queue<T> {
 	}
 
 	public T front() throws EmptyQueueException {
+		if(isEmpty())
+			throw new EmptyQueueException("Queue is empty.");
 		return head.getElement();
 	}
 
@@ -43,6 +47,20 @@ public class NodeQueue<T> implements Queue<T> {
 		if (size == 0)
 			tail = null;
 		return tmp;
+	}
+
+	public String toString() {
+		String s;
+		Node<T> p = head;
+		s = "[";
+		while (p != null) {
+			s += p.getElement();
+			s += ", ";
+			p = p.getNext();
+		}
+		if (s.length() > 1)
+			s = s.substring(0, s.length() - 2);
+		return s + "]";
 	}
 
 }
