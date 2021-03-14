@@ -117,6 +117,26 @@ public class NodePositionList<T> implements PositionList<T> {
 		v.getNext().setPrev(newNode);
 		v.setNext(newNode);
 	}
+	
+	public void makeFirst(Position<T> p) {
+		DNode<T> temp = checkPosition(p);
+		this.addFirst(temp.element());
+		this.remove(p);
+	}
+	
+	public void reverseNodePositionList() {
+		DNode<T> xPos = (DNode<T>) this.first();
+		DNode<T> yPos = (DNode<T>) this.last();
+		int c = 0;
+		int comparator = (this.size() % 2 == 0) ? this.size() / 2 + 1 : this.size() / 2;
+		while (comparator != c) {
+			T temp = this.set(xPos, yPos.element());
+			this.set(yPos, temp);
+			xPos = xPos.getNext();
+			yPos = yPos.getPrev();
+			c++;
+		}
+	}
 
 	private static <T> String toString(PositionList<T> l) {
 		String s = "";

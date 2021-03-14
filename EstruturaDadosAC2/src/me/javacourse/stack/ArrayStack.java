@@ -22,7 +22,8 @@ public class ArrayStack<E> implements Stack<E> {
 	}
 
 	public boolean isEmpty() {
-		return (top < 0);
+		if(this.size() > 0) return false;
+		else return true;
 	}
 
 	public void push(E element) throws FullStackException {

@@ -34,5 +34,4 @@ class NodeStackTest {
         ns = ns.reverseList();
         assertEquals("[X, P, T]", ns.toString(), "Deve imprimir [X, P, T]");
 	}
-
 }
