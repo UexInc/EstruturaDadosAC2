@@ -41,14 +41,14 @@ public class ArrayQueue<T> implements Queue<T> {
 		front = (front + 1) % capacity;
 		return temp;
 	}
-	
+
 	public String toString() {
 		String s;
 		s = "(";
-		if (size() > 0) s += queue[0];
+		if (size() > 0) s += queue[front];
 		if (size() > 1) {
-			for (int i = 1; i <= size() - 1; i++) {
-				s += ", " + queue[i];
+			for (int i = 1; i < size(); i++) {
+				s += ", " + queue[(front + i) % capacity];
 			}
 		}
 		return s + ")";

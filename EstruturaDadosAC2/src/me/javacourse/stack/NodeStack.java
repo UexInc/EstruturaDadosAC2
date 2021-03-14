@@ -57,5 +57,18 @@ public class NodeStack<T> implements Stack<T> {
 			s = s.substring(0, s.length() - 2);
 		return s + "]";
 	}
+	
+	public NodeStack<T> reverseList() {
+        NodeStack<T> newNodeStack = new NodeStack<T>();
+        Node<T> last = this.top;
+        while (this.size() != newNodeStack.size()) {
+            newNodeStack.push(last.getElement());
+            if (newNodeStack.top.getNext() != null) {
+                newNodeStack.top.setNext(newNodeStack.top.getNext());
+            }
+            last = last.getNext();
+        }
+        return newNodeStack;
+    }
 
 }
