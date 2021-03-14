@@ -55,21 +55,4 @@ class NodePositionListTest {
 		assertEquals("[6, 4, 1, 9]", l.toString(), "[6, 4, 1, 9]");
 	}
 
-	/*
-	 * 13) A implementação de NodePositionList não faz verificações de erro para
-	 * testar se uma dada posição p é realmente membro dessa lista em particular.
-	 * 
-	 * a. Por exemplo, se p é uma posição da lista S, a execução T.addAfter(p,e)
-	 * deveria lançar a exceção InvalidPositionException pois p não é uma posição de
-	 * T.
-	 * 
-	 * b. Descreva como alterar a implementação de NodePositionList de uma forma
-	 * eficiente que impeça esses maus usos.
-	 */
-
-	@Test
-	void checkPositionInList() {
-		
-	}
-
 }
