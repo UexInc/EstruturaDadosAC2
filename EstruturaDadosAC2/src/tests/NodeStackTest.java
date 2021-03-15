@@ -31,7 +31,8 @@ class NodeStackTest {
 		assertEquals("[O, T, P, X]", ns.toString(), "Deve imprimir [O, T, P, X]");
 		assertEquals('O', ns.top(), "Deve retornar O");
 		assertEquals('O', ns.pop(), "Deve retornar O");
-        ns = ns.reverseList();
-        assertEquals("[X, P, T]", ns.toString(), "Deve imprimir [X, P, T]");
+		// 4) b. Inverta os dados de um arranjo usando o TAD Pilha usando LSE.
+        	ns = ns.reverseList();
+        	assertEquals("[X, P, T]", ns.toString(), "Deve imprimir [X, P, T]");
 	}
 }
