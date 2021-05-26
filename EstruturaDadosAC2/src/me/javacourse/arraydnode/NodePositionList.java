@@ -118,24 +118,34 @@ public class NodePositionList<T> implements PositionList<T> {
 		v.setNext(newNode);
 	}
 	
+	// 11) Implemente um método não recursivo para inverter uma lista de nodos.
+	
+	public void swap(Position<T> p1, Position<T> p2) {
+		T temp = set(p1, p2.element());
+		set(p2, temp);
+	}
+	
+	public void reverse() {
+		Position<T> p1 = first();
+		Position<T> p2 = last();
+		int center = size() / 2;
+		while (center != 0) {
+			swap(p1, p2);
+			p1 = next(p1);
+			p2 = prev(p2);
+			center--;
+		}
+	}
+	
+	/*
+	 * 12) Implemente um novo método, makeFirst(p), que move o elemento na posição p
+	 * para a primeira posição, mantendo a ordem relativa dos demais elementos
+	 * inalterada.
+	 */
 	public void makeFirst(Position<T> p) {
 		DNode<T> temp = checkPosition(p);
 		this.addFirst(temp.element());
 		this.remove(p);
-	}
-	
-	public void reverseNodePositionList() {
-		DNode<T> xPos = (DNode<T>) this.first();
-		DNode<T> yPos = (DNode<T>) this.last();
-		int c = 0;
-		int comparator = (this.size() % 2 == 0) ? this.size() / 2 + 1 : this.size() / 2;
-		while (comparator != c) {
-			T temp = this.set(xPos, yPos.element());
-			this.set(yPos, temp);
-			xPos = xPos.getNext();
-			yPos = yPos.getPrev();
-			c++;
-		}
 	}
 
 	private static <T> String toString(PositionList<T> l) {
