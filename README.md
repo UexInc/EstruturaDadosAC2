@@ -7,4 +7,4 @@
 * Ricardo de Oliveira Trovato (RA: 1903223)
 * Willian Donha dos Santos Pestana (RA: 1902650)
 
-* As Questão 5, 6, 7, 10 e 13 estão respondidas no arquivo pdf
+### As Questão 5, 6, 7, 10 e 13 estão respondidas no arquivo pdf
